@@ -13,9 +13,12 @@ from buscas.buscarProduto import busca_produtos
 
 # UPDATES
 from updates.updateCliente import update_cliente
+from updates.updateVendedor import update_vendedor
 
 # EXCLUSÕES
 from exclusões.excluirCliente import excluir_cliente
+from exclusões.excluirVendedor import excluir_vendedor
+
 
 #  Conexão com o Neo4j
 # uri = "neo4j+s://c87d723c.databases.neo4j.io"
@@ -74,16 +77,16 @@ while execucao:
         #     
         case 9:
             excluir_cliente(session)
-        # case 10:
-        #     
+        case 10:
+            excluir_vendedor(session)
         # case 11:
         #     
         # case 12:
         #     
         case 13:
             update_cliente(session)
-        # case 14:
-        #     
+        case 14:
+            update_vendedor(session)
         case 0:
             execucao = False
             break
